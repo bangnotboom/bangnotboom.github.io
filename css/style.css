@@ -128,18 +128,19 @@ section i.material-icons {
 .btn {}
 
 .card {
+    max-width: 1300px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 4rem;
     background: #001e3a;
     padding: 3rem;
+    height: auto;
 }
 
 img {
     width: 100%;
 }
-
-/* HÄR E DU MEN FUNKAR INTE */
 
 .card span {
     display: inline-flex;
@@ -147,7 +148,7 @@ img {
 
 
 
-.card:nth-child(4) > span {
+.card:nth-child(even) > span {
     order: 2;
 }
 
@@ -187,10 +188,14 @@ img {
 }
 
 .nobgimg {
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 160px;
+    margin: auto;
 }
+
+#visitkort {
+    font-family: audiowide;
+}
+
 
 
 @media(max-width:960px) {
@@ -203,22 +208,52 @@ img {
     }
 
     .card {
-        display: inline-block;
+        display: block;
         align-content: center;
         align-items: center;
         text-align: center;
     }
 
-
-    .container {
-        padding-right: 3rem;
-        padding-left: 3rem;
-        text-align: center;
+    #visitkort {
+        margin: auto;
+        display: block;
     }
 
-    @media(max-width:590px) {
+
+    @media(max-width:767px) {
 
         .logo {
-            height: 10rem;
+            height: 5rem;
+        }
+
+        section i.material-icons {
+            font-size: 5rem;
+        }
+
+
+        #visitkort img {
+            width: 5rem;
+        }
+
+        .card {
+            padding-left: 0px;
+            padding-right: 0px;
+            width: 80%
+        }
+
+        .card p {
+            font-size: 1rem;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+        }
+
+        .header-content h1 {
+            font-size: 35px;
+        }
+
+        .header-content p {
+            font-size: 15px;
         }
     }
